@@ -4,7 +4,7 @@ Really simple map to convert an Azure regional name into an abbreviated form.
 
 ```terraform
 locals {
-    azure_region = "Central US"
+  azure_region = "Central US"
 }
 
 module "region-abbreviation-mapping" {
@@ -12,6 +12,6 @@ module "region-abbreviation-mapping" {
 }
 
 output "abbr" {
-    value = module.region-abbreviation-mapping.az_region_abbr_map[local.azure_region]
+  value = module.region-abbreviation-mapping.az_region_abbr_map[local.azure_region]
 }
 ```
