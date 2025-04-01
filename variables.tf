@@ -69,4 +69,3 @@ variable "az_region_abbr_map" {
     "Spain Central"                = "spc"
   }
 }
-`
