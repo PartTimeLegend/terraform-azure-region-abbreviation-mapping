@@ -15,8 +15,13 @@ jobs:
     - uses: actions/checkout@v4
       with:
         fetch-depth: '0'
+    - name: Validate Terraform Files
+      uses: devops-infra/action-tflint@v0.3
+      with:
+        tflint_path: "."
     - name: Bump version and push tag
       uses: anothrNick/github-tag-action@1.71.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         WITH_V: true
+        DEFAULT_BUMP: patch
