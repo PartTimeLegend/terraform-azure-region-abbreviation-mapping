@@ -16,7 +16,7 @@ jobs:
       with:
         fetch-depth: '0'
     - name: Validate Terraform Files
-      uses: devops-infra/action-tflint@v0.3
+      uses: devops-infra/action-tflint@v1.0
       with:
         tflint_path: "."
     - name: Bump version and push tag
