@@ -1,12 +1,13 @@
 # Terraform Azure Region Abbreviation Mapping
 
-[![Tag](https://github.com/PartTimeLegend/terraform-azure-region-abbreviation-mapping/actions/workflows/tag.yml/badge.svg)](https://github.com/PartTimeLegend/terraform-azure-region-abbreviation-mapping/actions/workflows/tag.yml) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/parttimelegend/terraform-azure-region-abbreviation-mapping) ![GitHub repo file count](https://img.shields.io/github/directory-file-count/parttimelegend/terraform-azure-region-abbreviation-mapping) ![GitHub repo size](https://img.shields.io/github/repo-size/parttimelegend/terraform-azure-region-abbreviation-mapping) ![GitHub Sponsors](https://img.shields.io/github/sponsors/parttimelegend) ![GitHub](https://img.shields.io/github/license/parttimelegend/terraform-azure-region-abbreviation-mapping) ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/parttimelegend/terraform-azure-region-abbreviation-mapping) ![GitHub last commit](https://img.shields.io/github/last-commit/parttimelegend/terraform-azure-region-abbreviation-mapping)
+[![Tag](https://github.com/PartTimeLegend/terraform-azure-region-abbreviation-mapping/actions/workflows/tag.yml/badge.svg)](https://github.com/PartTimeLegend/terraform-azure-region-abbreviation-mapping/actions/workflows/tag.yml)
 
 A simple module that provides mappings between Azure region names and their standardized abbreviations for consistent resource naming.
 
 ## Features
 
 - Complete mapping of Azure region names to official abbreviations
+- Supports both canonical Azure display names and normalized lowercase names without spaces
 - Helper functions to simplify region naming in Azure resources
 - Regularly maintained with new Azure regions
 - Zero external dependencies
@@ -26,7 +27,28 @@ module "region-abbreviation-mapping" {
 }
 
 output "region_abbreviation" {
-  value = module.region-abbreviation-mapping.az_region_abbr_map[local.azure_region]
+  value = module.region-abbreviation-mapping.lookup_region_abbreviation[local.azure_region]
+}
+```
+
+### Using Normalized Region Names
+
+```terraform
+module "region-abbreviation-mapping" {
+  source  = "PartTimeLegend/region-abbreviation-mapping/azure"
+}
+
+locals {
+  canonical_region  = "UK West"
+  normalized_region = "ukwest"
+}
+
+output "canonical_region_abbreviation" {
+  value = module.region-abbreviation-mapping.lookup_region_abbreviation[local.canonical_region]
+}
+
+output "normalized_region_abbreviation" {
+  value = module.region-abbreviation-mapping.lookup_region_abbreviation[local.normalized_region]
 }
 ```
 
@@ -46,9 +68,9 @@ locals {
 
 | Name | Description |
 |------|-------------|
-| `az_region_abbr_map` | Complete map of Azure region names to their abbreviations |
-| `lookup_region_abbreviation` | Function to lookup a region's abbreviation |
-| `region_names` | List of all Azure region names |
+| `az_region_abbr_map` | Canonical map of Azure region names to their abbreviations |
+| `lookup_region_abbreviation` | Lookup map supporting standard display names and normalized lowercase names without spaces |
+| `region_names` | List of canonical Azure region names |
 | `region_abbreviations` | List of all region abbreviations |
 
 ## License
