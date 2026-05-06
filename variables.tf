@@ -79,3 +79,15 @@ variable "az_region_abbr_map" {
     "West US 3"            = "wus3"
   }
 }
+
+locals {
+  az_region_abbr_map_normalized = {
+    for region_name, abbreviation in var.az_region_abbr_map :
+    lower(replace(region_name, " ", "")) => abbreviation
+  }
+
+  az_region_abbr_lookup_map = merge(
+    var.az_region_abbr_map,
+    local.az_region_abbr_map_normalized,
+  )
+}
