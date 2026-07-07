@@ -45,9 +45,9 @@ variable "az_region_abbr_map" {
     "Malaysia West"        = "myw"
     "Mexico Central"       = "mxc"
     "New Zealand North"    = "nzn"
-    "North East US 5"      = "neus5"
     "North Central US"     = "ncus"
     "North Europe"         = "neu"
+    "Northeast US 5"       = "neus5"
     "Norway East"          = "noe"
     "Norway West"          = "now"
     "Poland Central"       = "plc"
@@ -98,6 +98,7 @@ locals {
     "US Gov Virginia" = var.az_region_abbr_map["USGov Virginia"]
     "US DoD Central"  = var.az_region_abbr_map["USDoD Central"]
     "US DoD East"     = var.az_region_abbr_map["USDoD East"]
+    "North East US 5" = var.az_region_abbr_map["Northeast US 5"]
   }
 
   az_region_abbr_lookup_map = merge(
