@@ -98,7 +98,6 @@ locals {
     "US Gov Virginia" = var.az_region_abbr_map["USGov Virginia"]
     "US DoD Central"  = var.az_region_abbr_map["USDoD Central"]
     "US DoD East"     = var.az_region_abbr_map["USDoD East"]
-    "North East US 5" = var.az_region_abbr_map["Northeast US 5"]
   }
 
   az_region_abbr_lookup_map = merge(
