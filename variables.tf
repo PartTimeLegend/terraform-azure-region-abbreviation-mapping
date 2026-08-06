@@ -97,12 +97,12 @@ locals {
   }
 
   az_region_abbr_map_aliases = {
-    "US Gov Arizona" = var.az_region_abbr_map["USGov Arizona"]
-    "US Gov Iowa" = var.az_region_abbr_map["USGov Iowa"]
-    "US Gov Texas" = var.az_region_abbr_map["USGov Texas"]
-    "US Gov Virginia" = var.az_region_abbr_map["USGov Virginia"]
-    "US DoD Central" = var.az_region_abbr_map["USDoD Central"]
-    "US DoD East" = var.az_region_abbr_map["USDoD East"]
+    "US Gov Arizona"      = var.az_region_abbr_map["USGov Arizona"]
+    "US Gov Iowa"         = var.az_region_abbr_map["USGov Iowa"]
+    "US Gov Texas"        = var.az_region_abbr_map["USGov Texas"]
+    "US Gov Virginia"     = var.az_region_abbr_map["USGov Virginia"]
+    "US DoD Central"      = var.az_region_abbr_map["USDoD Central"]
+    "US DoD East"         = var.az_region_abbr_map["USDoD East"]
     "South Central India" = var.az_region_abbr_map["India South Central"]
   }
 
