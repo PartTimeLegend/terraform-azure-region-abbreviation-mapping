@@ -27,9 +27,12 @@ variable "az_region_abbr_map" {
     "East US"              = "eus"
     "East US 2"            = "eus2"
     "East US 2 EUAP"       = "eus2euap"
+    "East US STG"          = "eusstg"
     "France Central"       = "frc"
     "France South"         = "frs"
+    "Germany Central"      = "gec"
     "Germany North"        = "gn"
+    "Germany Northeast"    = "gne"
     "Germany West Central" = "gwc"
     "Indonesia Central"    = "idc"
     "India South Central"  = "scin"
@@ -46,6 +49,7 @@ variable "az_region_abbr_map" {
     "Mexico Central"       = "mxc"
     "New Zealand North"    = "nzn"
     "North Central US"     = "ncus"
+    "North Central US STG" = "ncusstg"
     "North Europe"         = "neu"
     "Norway East"          = "noe"
     "Norway West"          = "now"
@@ -54,6 +58,7 @@ variable "az_region_abbr_map" {
     "South Africa North"   = "san"
     "South Africa West"    = "saw"
     "South Central US"     = "scus"
+    "South Central US STG" = "scusstg"
     "South India"          = "sin"
     "Southeast Asia"       = "sea"
     "Southeast US"         = "seus"
@@ -81,6 +86,7 @@ variable "az_region_abbr_map" {
     "West US"              = "wus"
     "West US 2"            = "wus2"
     "West US 3"            = "wus3"
+    "West US STG"          = "wusstg"
   }
 }
 
@@ -91,12 +97,13 @@ locals {
   }
 
   az_region_abbr_map_aliases = {
-    "US Gov Arizona"  = var.az_region_abbr_map["USGov Arizona"]
-    "US Gov Iowa"     = var.az_region_abbr_map["USGov Iowa"]
-    "US Gov Texas"    = var.az_region_abbr_map["USGov Texas"]
-    "US Gov Virginia" = var.az_region_abbr_map["USGov Virginia"]
-    "US DoD Central"  = var.az_region_abbr_map["USDoD Central"]
-    "US DoD East"     = var.az_region_abbr_map["USDoD East"]
+    "US Gov Arizona"      = var.az_region_abbr_map["USGov Arizona"]
+    "US Gov Iowa"         = var.az_region_abbr_map["USGov Iowa"]
+    "US Gov Texas"        = var.az_region_abbr_map["USGov Texas"]
+    "US Gov Virginia"     = var.az_region_abbr_map["USGov Virginia"]
+    "US DoD Central"      = var.az_region_abbr_map["USDoD Central"]
+    "US DoD East"         = var.az_region_abbr_map["USDoD East"]
+    "South Central India" = var.az_region_abbr_map["India South Central"]
   }
 
   az_region_abbr_lookup_map = merge(
