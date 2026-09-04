@@ -14,7 +14,6 @@ variable "az_region_abbr_map" {
     "Canada East"          = "cae"
     "Central India"        = "cin"
     "Central US"           = "cus"
-    "Central US EUAP"      = "cuseuap"
     "Chile Central"        = "clc"
     "China East"           = "cne"
     "China East 2"         = "cne2"
@@ -26,8 +25,7 @@ variable "az_region_abbr_map" {
     "East Asia"            = "ea"
     "East US"              = "eus"
     "East US 2"            = "eus2"
-    "East US 2 EUAP"       = "eus2euap"
-    "East US STG"          = "eusstg"
+    "East US 3"            = "eus3"
     "France Central"       = "frc"
     "France South"         = "frs"
     "Germany Central"      = "gec"
@@ -49,7 +47,6 @@ variable "az_region_abbr_map" {
     "Mexico Central"       = "mxc"
     "New Zealand North"    = "nzn"
     "North Central US"     = "ncus"
-    "North Central US STG" = "ncusstg"
     "North Europe"         = "neu"
     "Norway East"          = "noe"
     "Norway West"          = "now"
@@ -58,7 +55,6 @@ variable "az_region_abbr_map" {
     "South Africa North"   = "san"
     "South Africa West"    = "saw"
     "South Central US"     = "scus"
-    "South Central US STG" = "scusstg"
     "South India"          = "sin"
     "Southeast Asia"       = "sea"
     "Southeast US"         = "seus"
@@ -73,20 +69,12 @@ variable "az_region_abbr_map" {
     "UAE North"            = "uaen"
     "UK South"             = "uks"
     "UK West"              = "ukw"
-    "US Gov Non-Regional"  = "usgnr"
-    "USDoD Central"        = "usdc"
-    "USDoD East"           = "usde"
-    "USGov Arizona"        = "usga"
-    "USGov Iowa"           = "usgi"
-    "USGov Texas"          = "usgt"
-    "USGov Virginia"       = "usgv"
     "West Central US"      = "wcus"
     "West Europe"          = "weu"
     "West India"           = "win"
     "West US"              = "wus"
     "West US 2"            = "wus2"
     "West US 3"            = "wus3"
-    "West US STG"          = "wusstg"
   }
 }
 
@@ -97,12 +85,6 @@ locals {
   }
 
   az_region_abbr_map_aliases = {
-    "US Gov Arizona"      = var.az_region_abbr_map["USGov Arizona"]
-    "US Gov Iowa"         = var.az_region_abbr_map["USGov Iowa"]
-    "US Gov Texas"        = var.az_region_abbr_map["USGov Texas"]
-    "US Gov Virginia"     = var.az_region_abbr_map["USGov Virginia"]
-    "US DoD Central"      = var.az_region_abbr_map["USDoD Central"]
-    "US DoD East"         = var.az_region_abbr_map["USDoD East"]
     "South Central India" = var.az_region_abbr_map["India South Central"]
   }
 
