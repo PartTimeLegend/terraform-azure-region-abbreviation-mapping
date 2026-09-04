@@ -69,6 +69,11 @@ variable "az_region_abbr_map" {
     "UAE North"            = "uaen"
     "UK South"             = "uks"
     "UK West"              = "ukw"
+    "US Gov Non-Regional"  = "usgnr"
+    "USGov Arizona"        = "usga"
+    "USGov Iowa"           = "usgi"
+    "USGov Texas"          = "usgt"
+    "USGov Virginia"       = "usgv"
     "West Central US"      = "wcus"
     "West Europe"          = "weu"
     "West India"           = "win"
@@ -85,6 +90,10 @@ locals {
   }
 
   az_region_abbr_map_aliases = {
+    "US Gov Arizona"      = var.az_region_abbr_map["USGov Arizona"]
+    "US Gov Iowa"         = var.az_region_abbr_map["USGov Iowa"]
+    "US Gov Texas"        = var.az_region_abbr_map["USGov Texas"]
+    "US Gov Virginia"     = var.az_region_abbr_map["USGov Virginia"]
     "South Central India" = var.az_region_abbr_map["India South Central"]
   }
 
