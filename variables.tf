@@ -52,6 +52,7 @@ variable "az_region_abbr_map" {
     "Norway West"          = "now"
     "Poland Central"       = "plc"
     "Qatar Central"        = "qac"
+    "Saudi Arabia East"    = "sae"
     "South Africa North"   = "san"
     "South Africa West"    = "saw"
     "South Central US"     = "scus"
