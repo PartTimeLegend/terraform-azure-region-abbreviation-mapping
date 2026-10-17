@@ -8,9 +8,12 @@ A simple module that provides mappings between Azure region names and their stan
 
 - Complete mapping of Azure region names to official abbreviations
 - Supports both canonical Azure display names and normalized lowercase names without spaces
+- Includes supported preview/EUAP, Gov, and DoD aliases alongside the public GA canonical map
 - Helper functions to simplify region naming in Azure resources
 - Regularly maintained with new Azure regions
 - Zero external dependencies
+
+> Convention: keep the canonical map focused on public GA Azure regions and their standard abbreviations; add preview, EUAP, Gov, DoD, and other sovereign variants only when they are explicitly supported aliases for this module.
 
 ## Usage
 

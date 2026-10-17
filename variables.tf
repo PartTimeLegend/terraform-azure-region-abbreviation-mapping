@@ -14,6 +14,7 @@ variable "az_region_abbr_map" {
     "Canada East"          = "cae"
     "Central India"        = "cin"
     "Central US"           = "cus"
+    "Central US EUAP"      = "ceuap"
     "Chile Central"        = "clc"
     "China East"           = "cne"
     "China East 2"         = "cne2"
@@ -25,6 +26,7 @@ variable "az_region_abbr_map" {
     "East Asia"            = "ea"
     "East US"              = "eus"
     "East US 2"            = "eus2"
+    "East US 2 EUAP"       = "eus2euap"
     "East US 3"            = "eus3"
     "France Central"       = "frc"
     "France South"         = "frs"
@@ -52,6 +54,7 @@ variable "az_region_abbr_map" {
     "Norway West"          = "now"
     "Poland Central"       = "plc"
     "Qatar Central"        = "qac"
+    "Saudi Arabia East"    = "sae"
     "South Africa North"   = "san"
     "South Africa West"    = "saw"
     "South Central US"     = "scus"
@@ -74,6 +77,8 @@ variable "az_region_abbr_map" {
     "USGov Iowa"           = "usgi"
     "USGov Texas"          = "usgt"
     "USGov Virginia"       = "usgv"
+    "USDoD Central"        = "udc"
+    "USDoD East"           = "ude"
     "West Central US"      = "wcus"
     "West Europe"          = "weu"
     "West India"           = "win"
@@ -94,6 +99,8 @@ locals {
     "US Gov Iowa"         = var.az_region_abbr_map["USGov Iowa"]
     "US Gov Texas"        = var.az_region_abbr_map["USGov Texas"]
     "US Gov Virginia"     = var.az_region_abbr_map["USGov Virginia"]
+    "US DoD Central"      = var.az_region_abbr_map["USDoD Central"]
+    "US DoD East"         = var.az_region_abbr_map["USDoD East"]
     "South Central India" = var.az_region_abbr_map["India South Central"]
   }
 
